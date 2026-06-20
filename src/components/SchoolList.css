@@ -1,0 +1,77 @@
+.school-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.school-card {
+  display: flex;
+  gap: 0;
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.12s ease;
+}
+
+.school-card:hover {
+  background: #EFEBE3;
+}
+
+.school-card.selected {
+  background: #EAE5DA;
+}
+
+.school-card-bar {
+  width: 4px;
+  flex-shrink: 0;
+}
+
+.school-card-body {
+  padding: 0.85rem 1.1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.school-card-body h3 {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 0.2rem;
+  color: var(--color-ink);
+}
+
+.school-card-authority {
+  font-size: 0.78rem;
+  color: #7A8891;
+  margin: 0 0 0.3rem;
+}
+
+.school-card-address {
+  font-size: 0.82rem;
+  color: #4A5A63;
+  margin: 0 0 0.3rem;
+}
+
+.no-pin-note, .approx-pin-note {
+  color: var(--color-charter);
+  font-style: italic;
+}
+
+.school-card-grades {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #8A9499;
+  margin: 0;
+}
+
+.school-list-empty {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: #7A8891;
+}
+
+.school-list-empty .hint {
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+}

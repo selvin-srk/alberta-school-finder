@@ -1,0 +1,73 @@
+/* ============================================
+   Design tokens — the single source of truth for
+   colors, type, and spacing used across the whole site.
+   Changing a value here updates it everywhere.
+   ============================================ */
+:root {
+  /* Core palette */
+  --color-ink: #1B3A4B;        /* primary text, headers, trust */
+  --color-bg: #F7F5F1;         /* warm off-white background */
+  --color-bg-raised: #FFFFFF;  /* cards, panels */
+  --color-border: #E2DDD3;
+
+  /* Authority-type colors — these double as the map legend.
+     Each school's pin color comes from its authority type. */
+  --color-public: #2E7D6B;       /* muted teal */
+  --color-separate: #A8543E;     /* terracotta */
+  --color-francophone: #6B5B95;  /* plum */
+  --color-charter: #C9962C;      /* ochre */
+  --color-private: #5A6B7A;      /* slate gray (also covers ECS Private Operator, Federal First Nations, Provincial) */
+
+  /* Type */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --shadow-card: 0 1px 3px rgba(27, 58, 75, 0.08), 0 1px 2px rgba(27, 58, 75, 0.06);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.15;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+/* Visible keyboard focus everywhere — accessibility floor from the
+   design skill: never remove focus outlines without replacing them. */
+:focus-visible {
+  outline: 3px solid var(--color-charter);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

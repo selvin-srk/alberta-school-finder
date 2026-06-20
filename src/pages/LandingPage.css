@@ -1,0 +1,143 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 3rem;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 4.5rem 2rem 3.5rem;
+  align-items: center;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-public);
+  margin: 0 0 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4A5A63;
+  max-width: 46ch;
+  margin: 1.5rem 0 2rem;
+}
+
+.hero-cta {
+  display: inline-block;
+  background: var(--color-ink);
+  color: var(--color-bg);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-sm);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.hero-cta:hover {
+  background: var(--color-public);
+  transform: translateY(-1px);
+}
+
+/* Legend card — the "signature element": authority-type colors are
+   introduced here, then reused as actual map pin colors on /finder */
+.hero-legend {
+  background: var(--color-bg-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 1.75rem;
+}
+
+.legend-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #7A8891;
+  margin: 0 0 1.1rem;
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.legend-row:last-child {
+  border-bottom: none;
+}
+
+.legend-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-label {
+  flex: 1;
+  font-size: 0.92rem;
+}
+
+.legend-count {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: #7A8891;
+}
+
+.why {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1rem 2rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.why-item h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.why-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4A5A63;
+  margin: 0;
+}
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 1.75rem 2rem;
+  text-align: center;
+}
+
+.site-footer p {
+  font-size: 0.82rem;
+  color: #8A9499;
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+@media (max-width: 880px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.25rem;
+  }
+  .why {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1.25rem 3rem;
+  }
+}
