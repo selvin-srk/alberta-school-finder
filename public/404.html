@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Alberta School Finder</title>
+    <script>
+      // GitHub Pages serves this file for any URL it doesn't recognize as
+      // a real file (e.g. a direct visit or refresh on /finder). Instead of
+      // showing a dead end, we redirect back to index.html with the
+      // intended path encoded in a query string. A small script in
+      // index.html then reads that and hands the real path to React
+      // Router, so the app loads on the correct page instead of the root.
+      var path = window.location.pathname.replace('/alberta-school-finder', '');
+      sessionStorage.setItem('redirectPath', path + window.location.search + window.location.hash);
+      window.location.replace('/alberta-school-finder/');
+    </script>
+  </head>
+  <body>
+    Redirecting…
+  </body>
+</html>
